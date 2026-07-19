@@ -5,22 +5,51 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Overall Pass Rate](https://img.shields.io/badge/Overall%20Pass%20Rate-91.9%25-brightgreen)
 
-Production-grade, risk-based **Playwright + TypeScript** automation framework for the Leave Management System (LMS), built for hackathon speed and engineering rigor.
+Production-grade, risk-based **Playwright + TypeScript** automation framework for a Leave Management System (LMS), developed during **The Test Chat – AI Test Hackathon** using modern Quality Engineering practices, layered architecture, and evidence-driven test reporting.
 
 ---
 
 ## 1) Project Overview
 
-This repository contains a layered automation framework validating LMS behavior across:
-- **API tests** for business rules and contract semantics
-- **UI tests** for role-driven behavior and user-facing reliability
-- **E2E tests** for critical business journeys
+This repository contains a production-style **Playwright + TypeScript** automation framework designed to validate a Leave Management System (LMS) through a comprehensive multi-layer testing strategy.
 
-Design goals: determinism, maintainability, requirement traceability, and evidence-ready reporting.
+The framework focuses on delivering fast, reliable, and maintainable automated validation across the application's highest-risk business workflows while demonstrating production-quality automation engineering practices.
+
+Implemented test layers include:
+
+- **API Testing** – business rules, validation, workflow transitions, contract verification, and HTTP status semantics
+- **UI Testing** – role-based navigation, form validation, synchronization, accessibility-first interactions, and user-visible behavior
+- **End-to-End (E2E) Testing** – critical business workflows covering complete user journeys across the application
+
+Key engineering principles adopted throughout the framework include:
+
+- Risk-based test prioritization
+- Layered, maintainable framework architecture
+- Requirement-to-test traceability
+- Evidence-driven defect reporting
+- Parallel execution with isolated test data
+- Production-ready coding standards and reusable automation components
 
 ---
 
-## 2) Hackathon Objective
+## 2) Application Under Test (AUT)
+
+This automation framework validates the **Leave Management System (LMS)** provided as the official application for **The Test Chat – AI Test Hackathon**.
+
+| Item | Details |
+|------|---------|
+| Application | Leave Management System (LMS) |
+| Event | The Test Chat – AI Test Hackathon |
+| AUT Repository | https://github.com/postqode/postqode-community |
+| Hackathon Repository | https://github.com/postqode/postqode-community/tree/main/samples/apps/leave-management-system |
+| Application Owner | Postqode / The Test Chat |
+| This Repository | Independent Playwright + TypeScript automation framework containing test implementation, framework architecture, documentation, execution evidence, bug reports, enhancement recommendations, RTM, coverage matrix, and supporting quality engineering artifacts. |
+
+> **Note:** The Application Under Test (AUT) is maintained separately by the hackathon organizers. This repository contains **only the automation framework and quality engineering deliverables** and does not include the application's source code.
+
+---
+
+## 3) Hackathon Objective
 
 Deliver maximum quality signal in limited time by prioritizing:
 1. High-impact risk areas first
@@ -30,7 +59,7 @@ Deliver maximum quality signal in limited time by prioritizing:
 
 ---
 
-## 3) Key Capabilities
+## 4) Key Capabilities
 
 - ✅ **Playwright + TypeScript** automation architecture
 - ✅ **UI, API, E2E** layered coverage
@@ -43,7 +72,7 @@ Deliver maximum quality signal in limited time by prioritizing:
 
 ---
 
-## 4) Framework Architecture (High-Level)
+## 5) Framework Architecture (High-Level)
 
 ```text
 tests (api/ui/e2e)
@@ -75,7 +104,7 @@ tests (api/ui/e2e)
 
 ---
 
-## 5) Tech Stack
+## 6) Tech Stack
 
 | Area | Technology |
 |---|---|
@@ -89,7 +118,7 @@ tests (api/ui/e2e)
 
 ---
 
-## 6) Project Structure
+## 7) Project Structure
 
 - `tests/api` — API validations, workflow/state semantics, contract checks
 - `tests/ui` — navigation, role/state sync, accessibility-focused behavior checks
@@ -101,7 +130,7 @@ tests (api/ui/e2e)
 
 ---
 
-## 7) Installation
+## 8) Installation
 
 ### Prerequisites
 - Node.js **20+**
@@ -122,7 +151,7 @@ copy .env.example .env
 
 ---
 
-## 8) Execution Commands
+## 9) Execution Commands
 
 | Command | Purpose |
 |---|---|
@@ -141,7 +170,7 @@ npx playwright test tests/ui/navigation.spec.ts --project=ui
 
 ---
 
-## 9) Test Layers
+## 10) Test Layers
 
 | Layer | Primary Objective | Status |
 |---|---|---|
@@ -152,7 +181,7 @@ npx playwright test tests/ui/navigation.spec.ts --project=ui
 
 ---
 
-## 10) Reports Generated
+## 11) Reports Generated
 
 - Playwright HTML: `reports/html/index.html`
 - JUnit XML: `reports/junit/results.xml`
@@ -163,7 +192,7 @@ npx playwright test tests/ui/navigation.spec.ts --project=ui
 
 ---
 
-## 11) Documentation Index
+## 12) Documentation Index
 
 ### Architecture
 - [AGENT.md](docs/architecture/AGENT.md)
@@ -187,7 +216,7 @@ npx playwright test tests/ui/navigation.spec.ts --project=ui
 
 ---
 
-## 12) Current Execution Summary
+## 13) Current Execution Summary
 
 > Source of truth: manually executed results provided by the user.
 
@@ -213,7 +242,7 @@ See: [docs/reports/KNOWN_LIMITATIONS.md](docs/reports/KNOWN_LIMITATIONS.md)
 
 ---
 
-## 13) Engineering Decisions for Production-Quality Automation & Hackathon Evaluation
+## 14) Engineering Decisions for Production-Quality Automation & Hackathon Evaluation
 
 - API-first risk execution for high ROI and deterministic confidence
 - Layered architecture (tests → fixtures → abstractions → shared utilities)
@@ -228,7 +257,7 @@ These choices support both **practical production readiness patterns** and **jud
 
 ---
 
-## 14) Future Improvements
+## 15) Future Improvements
 
 ### 🟡 Planned / Recommended
 1. Implement explicit authentication/authorization and align 403 semantics
