@@ -6,11 +6,11 @@ node_modules/
 .env.*
 !.env.example
 
-# Generated Playwright outputs
-playwright-report/
-reports/
-artifacts/
-test-results/
+# Playwright generated outputs (root only)
+/playwright-report/
+/reports/
+/artifacts/
+/test-results/
 
 # Logs
 *.log
